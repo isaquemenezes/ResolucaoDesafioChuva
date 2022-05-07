@@ -1,9 +1,9 @@
 <?php
 
-namespace Galoa\ExerciciosPhp2022\War\GameManager;
+namespace Galoa\GameManager;
 
-use Galoa\ExerciciosPhp2022\War\GamePlay\Country\ComputerPlayerCountry;
-use Galoa\ExerciciosPhp2022\War\GamePlay\Country\HumanPlayerCountry;
+use Galoa\GamePlay\Country\ComputerPlayerCountry;
+use Galoa\GamePlay\Country\HumanPlayerCountry;
 
 /**
  * Cria uma lista de países para o jogo.
@@ -11,10 +11,10 @@ use Galoa\ExerciciosPhp2022\War\GamePlay\Country\HumanPlayerCountry;
 class CountryList {
 
   /**
-   * Creates a list of countries, with one human player
+   * Cria uma lista de países, com um jogador humano
    *
-   * @return \Galoa\ExerciciosPhp2022\War\GamePlay\Country\CountryInterface[]
-   *   A list of countries.
+   * @return \Galoa\GamePlay\Country\CountryInterface[]
+   *   Uma lista de países.
    */
   public static function createWorld(): array {
     $map = [

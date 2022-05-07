@@ -1,7 +1,6 @@
 <?php
 
-namespace Galoa\ExerciciosPhp2022\War\GamePlay\Country;
-
+namespace Galoa\GamePlay\Country;
 /**
  * Define um país que é gerenciado pelo Computador.
  */
@@ -15,7 +14,7 @@ class ComputerPlayerCountry extends BaseCountry {
    *
    * NÃO deve ser um país conquistado.
    *
-   * @return \Galoa\ExerciciosPhp2022\War\GamePlay\Country\CountryInterface|null
+   * @return \Galoa\War\GamePlay\Country\CountryInterface|null
    *  O país que será atacado, NULL se nenhum for.
    */
   public function chooseToAttack(): ?CountryInterface {

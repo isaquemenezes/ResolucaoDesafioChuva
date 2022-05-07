@@ -1,6 +1,6 @@
 <?php
 
-namespace Galoa\ExerciciosPhp2022\War\GameManager;
+namespace Galoa\War\GameManager;
 
 /**
  * ..........................

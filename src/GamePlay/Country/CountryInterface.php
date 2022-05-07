@@ -1,6 +1,6 @@
 <?php
 
-namespace Galoa\ExerciciosPhp2022\War\GamePlay\Country;
+namespace Galoa\GamePlay\Country;
 
 /**
  * Defines a country, that is also a player.
@@ -23,7 +23,7 @@ interface CountryInterface {
    * This method is run ONLY ONCE on the game creation. You must handle the
    * addition of additional neighbors in the conquer() method.
    *
-   * @param \Galoa\ExerciciosPhp2022\War\GamePlay\Country\CountryInterface[] $neighbors
+   * @param \Galoa\GamePlay\Country\CountryInterface[] $neighbors
    *   An array of countries that neighbor this country, indexed by their names.
    */
   public function setNeighbors(array $neighbors): void;
@@ -39,7 +39,7 @@ interface CountryInterface {
    * its own. You should make sure, however, that you do NOT duplicated
    * countries in the array, nor return the current country as itself.
    *
-   * @return \Galoa\ExerciciosPhp2022\War\GamePlay\Country\CountryInterface[]
+   * @return \Galoa\GamePlay\Country\CountryInterface[]
    *   The country's neighbors.
    */
   public function getNeighbors(): array;
@@ -71,7 +71,7 @@ interface CountryInterface {
    *
    * Here, you must register the neighbors of the conquered country as your own.
    *
-   * @param \Galoa\ExerciciosPhp2022\War\GamePlay\Country\CountryInterface $conqueredCountry
+   * @param \Galoa\GamePlay\Country\CountryInterface $conqueredCountry
    *   The country that has just been conquered.
    */
   public function conquer(CountryInterface $conqueredCountry): void;

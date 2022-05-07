@@ -1,11 +1,11 @@
 <?php
 
-namespace Galoa\ExerciciosPhp2022\War\GameManager;
+namespace Galoa\GameManager;
 
-use Galoa\ExerciciosPhp2022\War\GamePlay\Battlefield;
-use Galoa\ExerciciosPhp2022\War\GamePlay\BattlefieldInterface;
-use Galoa\ExerciciosPhp2022\War\GamePlay\Country\ComputerPlayerCountry;
-use Galoa\ExerciciosPhp2022\War\GamePlay\Country\HumanPlayerCountry;
+use Galoa\GamePlay\Battlefield;
+use Galoa\GamePlay\BattlefieldInterface;
+use Galoa\GamePlay\Country\ComputerPlayerCountry;
+use Galoa\GamePlay\Country\HumanPlayerCountry;
 
 /**
  * Define um jogo, mantém os jogadores e interage com a interface do usuário.
@@ -15,14 +15,14 @@ class Game {
   /**
    * The battlefield. O campo de batalha.
    *
-   * @var \Galoa\ExerciciosPhp2022\War\GamePlay\BattlefieldInterface
+   * @var \Galoa\GamePlay\BattlefieldInterface
    */
   protected $battlefield;
 
   /**
    * Os países do jogo, incluindo os conquistados, indexados por nome.
    *
-   * @var \Galoa\ExerciciosPhp2022\War\GamePlay\Country\CountryInterface[]
+   * @var \Galoa\GamePlay\Country\CountryInterface[]
    */
   protected $countries;
 
@@ -36,9 +36,9 @@ class Game {
   /**
    * Builder. Construtora.
    *
-   * @param \Galoa\ExerciciosPhp2022\War\GamePlay\BattlefieldInterface $battlefield
+   * @param \Galoa\GamePlay\BattlefieldInterface $battlefield
    *   The battle field.
-   * @param \Galoa\ExerciciosPhp2022\War\GamePlay\Country\CountryInterface[] $countries
+   * @param \Galoa\GamePlay\Country\CountryInterface[] $countries
    *   Uma lista de países.
    */
   public function __construct(BattlefieldInterface $battlefield, array $countries) {
@@ -158,7 +158,7 @@ class Game {
   /**
    * Lista os países que não foram conquistados.
    *
-   * @return \Galoa\ExerciciosPhp2022\War\GamePlay\Country\CountryInterface[]
+   * @return \Galoa\GamePlay\Country\CountryInterface[]
    *   Uma série de países.
    */
   protected function getUnconqueredCountries(): array {

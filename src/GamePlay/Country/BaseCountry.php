@@ -1,6 +1,6 @@
 <?php
 
-namespace Galoa\ExerciciosPhp2022\War\GamePlay\Country;
+namespace Galoa\GamePlay\Country;
 
 /**
  * Defines a country, that is also a player.
