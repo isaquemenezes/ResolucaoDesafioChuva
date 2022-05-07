@@ -6,7 +6,7 @@ use Galoa\ExerciciosPhp2022\War\GamePlay\Country\ComputerPlayerCountry;
 use Galoa\ExerciciosPhp2022\War\GamePlay\Country\HumanPlayerCountry;
 
 /**
- * Creates a list of countries for the game.
+ * Cria uma lista de países para o jogo.
  */
 class CountryList {
 
@@ -24,7 +24,7 @@ class CountryList {
       'Rhovanion' => ['Rohan'],
       'Harondor' => ['Gondor', 'Mordor'],
       'Mordor' => ['Harondor', 'Gondor'],
-    ]; //Lista de Paises
+    ]; 
 
     $countries = [];
 

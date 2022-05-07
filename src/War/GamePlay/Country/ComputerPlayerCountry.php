@@ -3,20 +3,20 @@
 namespace Galoa\ExerciciosPhp2022\War\GamePlay\Country;
 
 /**
- * Defines a country that is managed by the Computer.
+ * Define um país que é gerenciado pelo Computador.
  */
 class ComputerPlayerCountry extends BaseCountry {
 
   /**
-   * Choose one country to attack, or none.
+   * Escolha um país para atacar ou nenhum.
    *
-   * The computer may choose to attack or not. If it chooses not to attack,
-   * return NULL. If it chooses to attack, return a neighbor to attack.
+   * O computador pode escolher atacar ou não. Se ele escolher não atacar,
+   * retorna NULO. Se ele escolher atacar, retorne um vizinho para atacar.
    *
-   * It must NOT be a conquered country.
+   * NÃO deve ser um país conquistado.
    *
    * @return \Galoa\ExerciciosPhp2022\War\GamePlay\Country\CountryInterface|null
-   *   The country that will be attacked, NULL if none will be.
+   *  O país que será atacado, NULL se nenhum for.
    */
   public function chooseToAttack(): ?CountryInterface {
     // @TODO

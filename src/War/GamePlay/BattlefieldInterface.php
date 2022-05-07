@@ -5,37 +5,38 @@ namespace Galoa\ExerciciosPhp2022\War\GamePlay;
 use Galoa\ExerciciosPhp2022\War\GamePlay\Country\CountryInterface;
 
 /**
- * Defines a class that will roll the dice and compute the winners of a battle.
+ * Define uma classe que irá rolar os dados e computar os vencedores de uma batalha.
  */
 interface BattlefieldInterface {
 
   /**
-   * Rolls the dice for a country.
+   * Joga os dados para um país.
    *
    * @param \Galoa\ExerciciosPhp2022\War\GamePlay\Country\CountryInterface $country
-   *   The country that is rolling the dice.
+   *  O país que está rolando os dados.
    * @param bool $isAtacking
-   *   TRUE if the dice is being rolled by the attacker, FALSE if by the
-   *   defender.
+   *   VERDADEIRO se o dado estiver sendo rolado pelo atacante, FALSO se pelo
+      
+   *   defensor
    *
    * @return int[]
-   *   An array with values from 1-to-6. The array must have as many items as:
-   *     - the number of troops of the country, when the defender is rolling
-   *       the dice.
-   *     - the number of troops of the country MINUS ONE, when the attacker is
-   *       the one rolling the dice.
+   *  Uma matriz com valores de 1 a 6. A matriz deve ter tantos itens quanto:
+   *      o número de tropas do país, quando o defensor está rolando
+   *        o dado.
+   *     o número de tropas do país MENOS UM, quando o atacante é
+   *      aquele que rola os dados.
    */
   public function rollDice(CountryInterface $country, bool $isAtacking): array;
 
   /**
-   * Computes the winners and losers of a battle.
+   * Calcula os vencedores e perdedores de uma batalha.
    *
    * @param \Galoa\ExerciciosPhp2022\War\GamePlay\Country\CountryInterface $attackingCountry
-   *   The country that is attacking.
+   *   O país que está atacando.
    * @param int[] $attackingDice
-   *   The number
+   *   O número
    * @param \Galoa\ExerciciosPhp2022\War\GamePlay\Country\CountryInterface $defendingCountry
-   *   The country that is defending from the attack.
+   *   O país que está se defendendo do ataque.
    */
   public function computeBattle(CountryInterface $attackingCountry, array $attackingDice, CountryInterface $defendingCountry, array $defendingDice): void;
 

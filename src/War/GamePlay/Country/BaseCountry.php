@@ -8,7 +8,7 @@ namespace Galoa\ExerciciosPhp2022\War\GamePlay\Country;
 class BaseCountry implements CountryInterface {
 
   /**
-   * The name of the country.
+   * O nome do país..
    *
    * @var string
    */
@@ -18,7 +18,7 @@ class BaseCountry implements CountryInterface {
    * Builder.
    *
    * @param string $name
-   *   The name of the country.
+   *   O nome do país..
    */
   public function __construct(string $name) {
     $this->name = $name;

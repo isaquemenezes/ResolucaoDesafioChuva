@@ -8,38 +8,38 @@ use Galoa\ExerciciosPhp2022\War\GamePlay\Country\ComputerPlayerCountry;
 use Galoa\ExerciciosPhp2022\War\GamePlay\Country\HumanPlayerCountry;
 
 /**
- * Defines a Game, it holds the players and interacts with the UI.
+ * Define um jogo, mantém os jogadores e interage com a interface do usuário.
  */
 class Game {
 
   /**
-   * The battlefield.
+   * The battlefield. O campo de batalha.
    *
    * @var \Galoa\ExerciciosPhp2022\War\GamePlay\BattlefieldInterface
    */
   protected $battlefield;
 
   /**
-   * The countries in the game, including conquered ones, indexed by name.
+   * Os países do jogo, incluindo os conquistados, indexados por nome.
    *
    * @var \Galoa\ExerciciosPhp2022\War\GamePlay\Country\CountryInterface[]
    */
   protected $countries;
 
   /**
-   * Instantiates a new game.
+   * Instancia um novo jogo.
    */
   public static function create(): Game {
     return new static(new Battlefield(), CountryList::createWorld());
   }
 
   /**
-   * Builder.
+   * Builder. Construtora.
    *
    * @param \Galoa\ExerciciosPhp2022\War\GamePlay\BattlefieldInterface $battlefield
    *   The battle field.
    * @param \Galoa\ExerciciosPhp2022\War\GamePlay\Country\CountryInterface[] $countries
-   *   A list of countries.
+   *   Uma lista de países.
    */
   public function __construct(BattlefieldInterface $battlefield, array $countries) {
     $this->battlefield = $battlefield;
@@ -47,7 +47,7 @@ class Game {
   }
 
   /**
-   * Plays the game.
+   * Joga o jogo.
    */
   public function play(): void {
     $i = 0;
@@ -62,7 +62,7 @@ class Game {
   }
 
   /**
-   * Display stats.
+   * Exibir estatísticas.
    */
   public function stats(): void {
     foreach ($this->countries as $country) {
@@ -71,11 +71,11 @@ class Game {
   }
 
   /**
-   * Displays the game results.
+   * Exibe os resultados do jogo.
    */
   public function results(): void {
     $countries = $this->getUnconqueredCountries();
-    // Should have only one.
+    // Deveria ter apenas um.
     if ($winner = reset($countries)) {
       print "~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~\n";
       print "~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~\n";
@@ -88,7 +88,7 @@ class Game {
   }
 
   /**
-   * Plays one round.
+   *Joga uma rodada.
    */
   protected function playRound(): void {
 
@@ -120,7 +120,7 @@ class Game {
       
       }
 
-      // If there is an attack, let's do battle.
+      // Se houver um ataque, vamos lutar.
       if ($defendingCountry) {
         print "  vai atacar " . $defendingCountry->getName() . "\n";
 
@@ -145,21 +145,21 @@ class Game {
   }
 
   /**
-   * Checks is the game is complete.
+   * Verifica se o jogo está completo.
    *
    * @return bool
-   *   TRUE if the game is over, FALSE otherwise.
+   *   TRUE se o jogo acabou, FALSE caso contrário.
    */
   protected function gameOver(): bool {
-    // If there is only one remaining country, the game is over.
+    // Se houver apenas um país restante, o jogo acabou.
     return count($this->getUnconqueredCountries()) <= 1;
   }
 
   /**
-   * Lists countries that have not been conquered.
+   * Lista os países que não foram conquistados.
    *
    * @return \Galoa\ExerciciosPhp2022\War\GamePlay\Country\CountryInterface[]
-   *   An array of countries.
+   *   Uma série de países.
    */
   protected function getUnconqueredCountries(): array {
 

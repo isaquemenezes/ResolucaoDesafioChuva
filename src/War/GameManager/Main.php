@@ -8,7 +8,7 @@ namespace Galoa\ExerciciosPhp2022\War\GameManager;
 class Main {
 
   /**
-   * Main runner of the game UI.
+   * Execussão principal da interface do usuário do jogo.
    */
   public static function run(): void {
     print "#########################################\n";

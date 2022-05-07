@@ -77,10 +77,10 @@ interface CountryInterface {
   public function conquer(CountryInterface $conqueredCountry): void;
 
   /**
-   * Decreases the number of troops in this country by a given number.
+   * Diminui o número de tropas neste país por um determinado número.
    *
    * @param int $killedTroops
-   *   The number of troops killed in battle.
+   *   O número de soldados mortos em batalha.
    */
   public function killTroops(int $killedTroops): void;
 
