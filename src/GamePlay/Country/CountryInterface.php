@@ -18,6 +18,9 @@ interface CountryInterface {
    */
 
   public function getName(): string; 
+
+
+
   /**
    * Sets the neighbors of this country.
    *
@@ -29,6 +32,9 @@ interface CountryInterface {
    */
   public function setNeighbors(array $neighbors): void;
 
+  
+  
+  
   /**
    * Lists the neighbors of a country.
    *

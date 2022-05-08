@@ -11,9 +11,9 @@ class Battlefield implements BattlefieldInterface {
 
    
 
-    
+    // public function rollDice(){}
 
     
 
-    public function computeBattle($rr) { }
+    // public function computeBattle($rr) { }
 }
