@@ -5,6 +5,7 @@ namespace Playcountry;
 /**
  * Defines a country, that is also a player.
  */
+
 interface CountryInterface {
 
   /**
@@ -15,8 +16,8 @@ interface CountryInterface {
    * @return string
    *   The name of the country.
    */
-  public function getName(): string;
 
+  public function getName(): string; 
   /**
    * Sets the neighbors of this country.
    *

@@ -3,7 +3,7 @@
 namespace Playcountry;
 
 /**
- * Defines a country, that is also a player.
+ * Define um país, que também é um jogador.
  */
 class BaseCountry implements CountryInterface {
 

@@ -17,30 +17,39 @@ class Game {
    *
    * @var  Play\BattlefieldInterface
    */
-  protected $battlefield;
+  
+   protected $battlefield;
 
   /**
    * Os países do jogo, incluindo os conquistados, indexados por nome.
    *
    * @var  Playcountry\CountryInterface[]
    */
-  protected $countries;
+  
+   protected $countries;
 
   /**
    * Instancia um novo jogo.
    */
-  public static function create(): Game {
-    return new static(new Battlefield(), CountryList::createWorld());
+  
+   public static function create(): Game {
+
+      // Dividir para conquistar
+      $new_game = new static(new Battlefield(), CountryList::createWorld());
+
+      return $new_game;
   }
 
   /**
    * Builder. Construtora.
    *
    * @param  Play\BattlefieldInterface $battlefield
-   *   The battle field.
+   *   O campo de batalha.
    * @param  Playcountry\CountryInterface[] $countries
    *   Uma lista de países.
    */
+
+  //Interface e array  
   public function __construct(BattlefieldInterface $battlefield, array $countries) {
     $this->battlefield = $battlefield;
     $this->countries = $countries;
@@ -49,13 +58,18 @@ class Game {
   /**
    * Joga o jogo.
    */
+
   public function play(): void {
     $i = 0;
 
+    //Enquanto for diferente do método gameOver() continua o jogo
     while (!$this->gameOver()) {
       $i++;
       print "===== Rodada # $i =====\n";
+      
+      //Exibe as estatísticas
       $this->stats();
+
       $this->playRound();
     }
     
@@ -74,7 +88,9 @@ class Game {
    * Exibe os resultados do jogo.
    */
   public function results(): void {
+
     $countries = $this->getUnconqueredCountries();
+    
     // Deveria ter apenas um.
     if ($winner = reset($countries)) {
       print "~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~\n";
@@ -85,6 +101,7 @@ class Game {
     }
 
     $this->stats();
+  
   }
 
   /**
@@ -97,7 +114,8 @@ class Game {
 
       $defendingCountry = NULL;
 
-      if ($attackingCountry instanceof ComputerPlayerCountry) {
+      if ($attackingCountry instanceof ComputerPlayerCountry) 
+      {
 
         $defendingCountry = $attackingCountry->chooseToAttack();
       
@@ -114,11 +132,12 @@ class Game {
         
         while ($defendingCountryName && !isset($neighbors[$defendingCountryName]));
 
-        if ($defendingCountryName) {
+        if ($defendingCountryName) 
+        {
           $defendingCountry = $this->countries[$defendingCountryName];
         }
       
-      }
+      } //END ELSEIF
 
       // Se houver um ataque, vamos lutar.
       if ($defendingCountry) {
@@ -132,17 +151,22 @@ class Game {
 
         $this->battlefield->computeBattle($attackingCountry, $attackingDice, $defendingCountry, $defendingDice);
 
-        if ($defendingCountry->isConquered()) {
+        if ($defendingCountry->isConquered()) 
+        {
+
           $attackingCountry->conquer($defendingCountry);
           print "  " . $defendingCountry->getName() . " foi anexado por " . $attackingCountry->getName() . "!\n";
         } else {
           print "  " . $defendingCountry->getName() . " conseguiu se defender!\n";
         }
-      }
+
+      } // END IF
       
       sleep(1);
-    }
-  }
+
+    } // END FOREACH
+
+  } //END CLASS
 
   /**
    * Verifica se o jogo está completo.
