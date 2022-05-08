@@ -14,7 +14,7 @@ class ComputerPlayerCountry extends BaseCountry {
    *
    * NÃO deve ser um país conquistado.
    *
-   * @return \Galoa\War\GamePlay\Country\CountryInterface|null
+   * @return Playcountry\CountryInterface|null
    *  O país que será atacado, NULL se nenhum for.
    */
   public function chooseToAttack(): ?CountryInterface {
