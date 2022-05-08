@@ -5,12 +5,15 @@
     "license": "None",
     "autoload": {
         "psr-4": {
-            "Galoa\\": "src/"
+            "Manager\\": "src/GameManager/",
+            "Play\\": "src/GamePlay/",
+            "Playcountry\\": "src/GamePlay/Country/"
+            
         }
     },
     "minimum-stability": "dev",
     "scripts": {
-        "war": "php -r \"require 'vendor/autoload.php'; Galoa\\War\\GameManager\\Main::run();\""
+        "war": "php -r \"require 'vendor/autoload.php'; Manager\\Main::run();\""
     },
     "require": {
         "box/spout": "^3.3"

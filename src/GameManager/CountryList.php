@@ -1,9 +1,9 @@
 <?php
 
-namespace Galoa\GameManager;
+namespace Manager;
 
-use Galoa\GamePlay\Country\ComputerPlayerCountry;
-use Galoa\GamePlay\Country\HumanPlayerCountry;
+use Playcountry\ComputerPlayerCountry;
+use Playcountry\HumanPlayerCountry;
 
 /**
  * Cria uma lista de países para o jogo.
@@ -13,7 +13,7 @@ class CountryList {
   /**
    * Cria uma lista de países, com um jogador humano
    *
-   * @return \Galoa\GamePlay\Country\CountryInterface[]
+   * @return Playcountry\CountryInterface[]
    *   Uma lista de países.
    */
   public static function createWorld(): array {

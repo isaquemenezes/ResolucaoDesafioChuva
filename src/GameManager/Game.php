@@ -1,11 +1,11 @@
 <?php
 
-namespace Galoa\GameManager;
+namespace Manager;
 
-use Galoa\GamePlay\Battlefield;
-use Galoa\GamePlay\BattlefieldInterface;
-use Galoa\GamePlay\Country\ComputerPlayerCountry;
-use Galoa\GamePlay\Country\HumanPlayerCountry;
+use Play\Battlefield;
+use Play\BattlefieldInterface;
+use Playcountry\ComputerPlayerCountry;
+use Playcountry\HumanPlayerCountry;
 
 /**
  * Define um jogo, mantém os jogadores e interage com a interface do usuário.
@@ -15,14 +15,14 @@ class Game {
   /**
    * The battlefield. O campo de batalha.
    *
-   * @var \Galoa\GamePlay\BattlefieldInterface
+   * @var  Play\BattlefieldInterface
    */
   protected $battlefield;
 
   /**
    * Os países do jogo, incluindo os conquistados, indexados por nome.
    *
-   * @var \Galoa\GamePlay\Country\CountryInterface[]
+   * @var  Playcountry\CountryInterface[]
    */
   protected $countries;
 
@@ -36,9 +36,9 @@ class Game {
   /**
    * Builder. Construtora.
    *
-   * @param \Galoa\GamePlay\BattlefieldInterface $battlefield
+   * @param  Play\BattlefieldInterface $battlefield
    *   The battle field.
-   * @param \Galoa\GamePlay\Country\CountryInterface[] $countries
+   * @param  Playcountry\CountryInterface[] $countries
    *   Uma lista de países.
    */
   public function __construct(BattlefieldInterface $battlefield, array $countries) {
@@ -158,7 +158,7 @@ class Game {
   /**
    * Lista os países que não foram conquistados.
    *
-   * @return \Galoa\GamePlay\Country\CountryInterface[]
+   * @return  GamePlay\Country\CountryInterface[]
    *   Uma série de países.
    */
   protected function getUnconqueredCountries(): array {

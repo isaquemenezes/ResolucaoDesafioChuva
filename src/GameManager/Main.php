@@ -1,6 +1,6 @@
 <?php
 
-namespace Galoa\War\GameManager;
+namespace Manager;
 
 /**
  * ..........................

@@ -1,6 +1,6 @@
 <?php
 
-namespace Galoa\GamePlay\Country;
+namespace Playcountry;
 
 /**
  * Defines a country, that is also a player.

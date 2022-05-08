@@ -1,6 +1,6 @@
 <?php
 
-namespace Galoa\GamePlay\Country;
+namespace Playcountry;
 /**
  * Define um país que é gerenciado pelo Computador.
  */

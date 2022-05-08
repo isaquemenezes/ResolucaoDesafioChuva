@@ -1,8 +1,8 @@
 <?php
 
-namespace Galoa\War\GamePlay;
+namespace Play;
 
-use Galoa\War\GamePlay\Country\CountryInterface;
+use Playcountry\CountryInterface;
 
 /**
  * Um gerente que vai rolar os dados e calcular os vencedores de uma batalha.

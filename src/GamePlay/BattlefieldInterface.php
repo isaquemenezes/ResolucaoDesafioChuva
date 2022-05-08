@@ -1,8 +1,8 @@
 <?php
 
-namespace Galoa\GamePlay;
+namespace Play;
 
-use Galoa\GamePlay\Country\CountryInterface;
+use Playcountry\CountryInterface;
 
 /**
  * Define uma classe que irá rolar os dados e computar os vencedores de uma batalha.
@@ -12,7 +12,7 @@ interface BattlefieldInterface {
   /**
    * Joga os dados para um país.
    *
-   * @param \Galoa\ExerciciosPhp2022\GamePlay\Country\CountryInterface $country
+   * @param Playcountry\CountryInterface $country
    *  O país que está rolando os dados.
    * @param bool $isAtacking
    *   VERDADEIRO se o dado estiver sendo rolado pelo atacante, FALSO se pelo
@@ -31,11 +31,11 @@ interface BattlefieldInterface {
   /**
    * Calcula os vencedores e perdedores de uma batalha.
    *
-   * @param \Galoa\ExerciciosPhp2022\GamePlay\Country\CountryInterface $attackingCountry
+   * @param Playcountry\CountryInterface $attackingCountry
    *   O país que está atacando.
    * @param int[] $attackingDice
    *   O número
-   * @param \Galoa\ExerciciosPhp2022\GamePlay\Country\CountryInterface $defendingCountry
+   * @param Playcountry\CountryInterface $defendingCountry
    *   O país que está se defendendo do ataque.
    */
   public function computeBattle(CountryInterface $attackingCountry, array $attackingDice, CountryInterface $defendingCountry, array $defendingDice): void;
