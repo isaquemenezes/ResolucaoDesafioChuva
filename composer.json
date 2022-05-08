@@ -3,6 +3,13 @@
     "description": "Exercícios de PHP para o processo seletivo da Chuva Inc.",
     "type": "project",
     "license": "None",
+    "authors": [
+		{
+			"name": "Isaque Menezes",
+			"email": "isaque-menezes@hotmail.com"
+		}
+	],
+    
     "autoload": {
         "psr-4": {
             "Manager\\": "src/GameManager/",
@@ -14,6 +21,7 @@
     "minimum-stability": "dev",
     "scripts": {
         "war": "php -r \"require 'vendor/autoload.php'; Manager\\Main::run();\""
+
     },
     "require": {
         "box/spout": "^3.3"
