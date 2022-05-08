@@ -13,7 +13,7 @@ use Playcountry\HumanPlayerCountry;
 class Game {
 
   /**
-   * The battlefield. O campo de batalha.
+   * O campo de batalha.
    *
    * @var  Play\BattlefieldInterface
    */

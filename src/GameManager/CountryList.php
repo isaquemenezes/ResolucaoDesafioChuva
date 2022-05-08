@@ -16,6 +16,7 @@ class CountryList {
    * @return Playcountry\CountryInterface[]
    *   Uma lista de países.
    */
+  
   public static function createWorld(): array {
     $map = [
       'Gondor' => ['Enedwaith', 'Rohan', 'Harondor', 'Mordor'],

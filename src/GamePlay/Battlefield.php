@@ -9,16 +9,11 @@ use Playcountry\CountryInterface;
  */
 class Battlefield implements BattlefieldInterface {
 
-    
-
-    public function roolDice() {
-       
-
-    }
+   
 
     
 
-    public function computeBattle() {
-        
-    }
+    
+
+    public function computeBattle($rr) { }
 }
