@@ -27,8 +27,8 @@ interface BattlefieldInterface {
    *      aquele que rola os dados.
    */
 
-  //public function rollDice(CountryInterface $country, bool $isAtacking): array;
- //public function rollDice($t);
+  public function rollDice(CountryInterface $country, bool $isAtacking): array;
+ 
 
   /**
    * Calcula os vencedores e perdedores de uma batalha.
@@ -40,8 +40,8 @@ interface BattlefieldInterface {
    * @param Playcountry\CountryInterface $defendingCountry
    *   O país que está se defendendo do ataque.
    */
-   //public function computeBattle(CountryInterface $attackingCountry, array $attackingDice, CountryInterface $defendingCountry, array $defendingDice): void;
-  public function computeBattle($f);
+   public function computeBattle(CountryInterface $attackingCountry, array $attackingDice, CountryInterface $defendingCountry, array $defendingDice): void;
+  
 
  
 
