@@ -22,13 +22,13 @@ class Main {
     $game = Game::create();
 
     //implementa o método play() de Game
-    //$game->play();
+    $game->play();
 
     //implementa o método results() de Game
     $game->results();
 
     //Quebra uma linha
-   // print "\n";
+    print "\n";
     
   }
 

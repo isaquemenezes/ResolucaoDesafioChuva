@@ -11,7 +11,7 @@ class Battlefield implements BattlefieldInterface {
 
    
 
-    public function rollDice(CountryInterface $country, bool $isAttacking): array
+    /*public function rollDice(CountryInterface $country, bool $isAttacking): array
     {
         $dicesNumbers = [];
 
@@ -24,7 +24,7 @@ class Battlefield implements BattlefieldInterface {
         rsort($dicesNumbers);
 
         return $dicesNumbers;
-    }
+    }*/
 
     public function computeBattle(CountryInterface $attackingCountry, array $attackingDice, CountryInterface $defendingCountry, array $defendingDice): void
     {
@@ -66,7 +66,7 @@ class Battlefield implements BattlefieldInterface {
         return $dice;
     }
 
-    public function computeBattle(CountryInterface $attackingCountry, array $attackingDice, CountryInterface $defendingCountry, array $defendingDice): void
+    /*public function computeBattle(CountryInterface $attackingCountry, array $attackingDice, CountryInterface $defendingCountry, array $defendingDice): void
     {
         $attackingDiceOrdened = arsort($attackingDice);
         $defendingDiceOrdened = arsort($defendingDice);
@@ -84,11 +84,11 @@ class Battlefield implements BattlefieldInterface {
 
         }
 
-    }
+    }*/
 
     //Op 3
 
-    public function rollDice(CountryInterface $country, bool $isAtacking) : array {
+   /* public function rollDice(CountryInterface $country, bool $isAtacking) : array {
         $diceResult=[];
         
         if($isAtacking){
@@ -104,9 +104,9 @@ class Battlefield implements BattlefieldInterface {
         rsort($diceResult);
 
         return $diceResult;
-    }
+    }*/
 
-    public function computeBattle(CountryInterface $attackingCountry, array $attackingDice, CountryInterface $defendingCountry, array $defendingDice): void {
+    /*public function computeBattle(CountryInterface $attackingCountry, array $attackingDice, CountryInterface $defendingCountry, array $defendingDice): void {
         if( count($attackingDice) <= count($defendingDice) ){
             $maxSets=count($attackingDice);
         }else{
@@ -119,6 +119,6 @@ class Battlefield implements BattlefieldInterface {
                 $attackingCountry->killTroops(1);
             }
         }
-    }
+    }*/
 
 }
