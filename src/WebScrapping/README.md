@@ -1,8 +1,17 @@
 # GaloScrapper
 ## Web Scrapping
-Neste segundo exercício você deve capturar os dados de uma página HTML e converter em uma planilha. O arquivo a ser lido é `webscrapping/origin.html`, ele é uma página (com algumas adaptações) de um Proceedings do Galoá. O seu objetivo é extrair as informações sobre trabalhos e montar uma planilha similar a `webscrapping/model.xlsx`.
+Neste segundo exercício você deve capturar os dados de uma página HTML e 
+converter em uma planilha. O arquivo a ser lido é 
 
-Para a resolução do exercício, você pode alterar qualquer arquivo dentro da pasta `src/WebScrapping`.
+`webscrapping/origin.html`, 
+
+ele é uma página (com algumas adaptações) de um Proceedings do Galoá. O seu objetivo é extrair as informações sobre trabalhos e montar uma planilha similar a 
+
+`webscrapping/model.xlsx`.
+
+Para a resolução do exercício, você pode alterar qualquer arquivo dentro da pasta 
+
+`src/WebScrapping`.
 
 ### Como rodar
 

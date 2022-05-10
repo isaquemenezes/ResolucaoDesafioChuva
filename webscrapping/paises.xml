@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<paises>
+    <nome>Brasil</nome>
+    <idiomas>pt</idiomas>
+    <cap>Brasilia</cap>
+    <c>Real</c>
+    <p> + 55 </p>
+</paises>
