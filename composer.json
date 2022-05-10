@@ -5,15 +5,17 @@
     "license": "None",
     "autoload": {
         "psr-4": {
-            "Galoa\\ExerciciosPhp2022\\": "src/"
+            "Galoa\\": "src/WebScrapping/"
         }
     },
     "minimum-stability": "dev",
     "scripts": {
-        "war": "php -r \"require 'vendor/autoload.php'; Galoa\\ExerciciosPhp2022\\War\\GameManager\\Main::run();\"",
-        "webscrapping": "php -r \"require 'vendor/autoload.php'; Galoa\\ExerciciosPhp2022\\WebScrapping\\Main::run();\""
+        "webscrapping": "php -r \"require 'vendor/autoload.php'; Galoa\\Main::run();\""
     },
     "require": {
-        "box/spout": "^3.3"
+        "box/spout": "^3.3",
+        "ext-dom": "*",
+        "ext-libxml": "*",
+        "ext-readline": "*"
     }
 }

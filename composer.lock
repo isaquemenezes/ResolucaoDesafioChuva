@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e3e63791896e1b930471aa6430e32164",
+    "content-hash": "725f5ba4e97fb133ce63247b87d775cd",
     "packages": [
         {
             "name": "box/spout",
@@ -87,7 +87,11 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "ext-dom": "*",
+        "ext-libxml": "*",
+        "ext-readline": "*"
+    },
     "platform-dev": [],
     "plugin-api-version": "2.3.0"
 }

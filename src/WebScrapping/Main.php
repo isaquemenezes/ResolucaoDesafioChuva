@@ -1,29 +1,26 @@
 <?php
 
-namespace Galoa\ExerciciosPhp2022\WebScrapping;
+namespace Galoa;
 
 use DOMDocument;
 
 /**
- * Runner for the Webscrapping exercice.
+ * Corredor para o exercício Web Scraping.
  */
 class Main {
 
   /**
-   * Main runner, instantiates a Scrapper and runs.
+   * Corredor principal, instancia um Scrapper e corre.
+   * O “ @” serve para ignorar os erros do HTML
    */
   public static function run(): void {
     
-      $dom = new DOMDocument('1.0', 'utf-8');
-      $dom2 = new DOMDocument('1.0', 'utf-8');
-      
-      // $d = $dom->loadHTMLFile(__DIR__ . '/../../webscrapping/origin.html');
-      // $d = $dom2->loadHTMLFile(__DIR__ . '/../../webscrapping/origin2.html');
-      // $d = simplexml_load_file(__DIR__ . '/../../webscrapping/paises.xml');
-      // var_dump($d);
-      // (new Scrapper())->scrap($dom);
+    $dom = new DOMDocument('1.0', 'utf-8');
+    @$dom->loadHTMLFile(__DIR__ . '/../../webscrapping/origin.html');
 
-      echo "gg";
+    (new Scrapper())->scrap($dom);
+
+    
   }
 
 }
